@@ -1,0 +1,507 @@
+* {
+    font-family: arial;
+}
+
+body {
+    margin:0;
+    padding: 0;
+}
+header {
+    display:flex; /* TORNAR O CONTEUDO DO CABEÇALHO FLEXBOX */
+    flex-direction: row;
+    justify-content: center; /* ALINHAR O CONTEÚDO DO CABEÇALHO NA HORIZONTAL (ROW) */
+    height: 120px;
+}
+.container {
+    display:flex;
+    justify-content: space-between; /* AFASTA OS ELEMENTOS DENTRO DO CONTAINER/CABEÇALHO (LOGO E MENU) */
+    width: 990px;
+}
+
+.logo {
+    display:flex;
+    align-items: center; /* ALINHA A LOGO NA VERTICAL (CONTRÁRIO DA ROW) */
+}
+
+.menu{
+    display: flex;
+    align-items: center; /* ALINHA O MENU NA VERTICAL (CONTRÁRIO DA ROW) */
+    font-family: arial;
+}
+
+nav ul, nav li { /* LISTA DENTRO DO MENU */
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+
+nav ul {
+    display:flex; /* ITEM SUPERIOR DA LISTA DENTRO DO MENU */
+}
+
+nav a {  /* LINKS DENTRO DO MENU */
+    display: inline-block;  /* ORGANIZA O POSICIONAMENTO DOS LINKS */
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #727272;
+}
+
+nav a:hover, nav .active a {  /* HOVER DOS LINKS DENTRO DO MENU E O LINK DO MENU QUE ESTIVER SELECIONADO */
+    background-color: #39aae1;
+    color: #fff;
+}
+
+#banner {
+    background-image:url(../images/img1.jpg);
+    background-position: center; /* para posicionar a imagem no centro */
+    background-size: cover; /* a imagem vai reduzir ou aumentar conforme o tamanho do monitor*/
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.column {  /* parte do container (no banner) que precisa ser column pois vai ficar um item abaixo do outro  */
+    display: flex;
+    flex-direction: column;
+}
+
+.banner_headline {
+    flex:1;   /* não precisa de um tamanho fixo (fica com o que restar do de baixo) */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner_headline h1 {
+    color: #ffffff;
+    font-size: 70px;
+    text-shadow: 0px 1px 0px #555;
+    margin: 0px;
+    padding: 0px;
+    max-width: 350px;
+}
+
+.banner_headline h2 {
+    color: #ffffff;
+    font-size: 21px;
+    text-shadow: 0px 1px 0px #555;
+    margin: 0px;
+    padding: 0px;
+    max-width: 350px;
+    margin-top: 30px;
+}
+
+.banner_options {
+    height:210px;    /* Precisa de um tamanho fixo */
+    display: flex;  /* O flex direction continua sendo row (pois é um do lado do outro)*/
+}
+
+.banner1 {
+    flex:1;
+    background-color: #39aae1;
+    color: #fff;
+    padding: 20px;
+}
+
+.banner2 {
+    flex:1;
+    background-color: #0079c7;
+    color: #fff;
+    padding: 20px;
+}
+
+.banner3{
+    flex:1;
+    background-color: #2b4c99;
+    color: #fff;
+    padding: 20px;
+}
+
+.banner_title {
+    font-size: 21px;
+}
+
+.banner_desc {      /* Conteúdo dos banners 1 e 2 */
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner_options a {     /* Link dos banners 1 e 2 */
+    display:inline-block;
+    color:#fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.banner_desc2 {     /* Conteúdo do banner 3 */
+    font-size:12px;
+    border-bottom: 1px solid #39aee1;
+    display:flex;
+    justify-content: space-between;
+    padding: 3px;
+}
+
+#geral {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#geral section {
+    flex:2;     /* Pois essa parte ocupa 2/3 da tela */
+}
+
+#geral aside {   /* Pois essa parte ocupa 1/3 da tela */
+    flex: 1;
+}
+
+.widget_title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.widget_title_text {
+    font-size: 21px;
+    color: #000;
+    font-weight: bold;
+
+}
+
+.widget_title_bar {
+    width: 50px;
+    height: 2px;
+    background-color: #36a9e1;
+    margin-top: 10px;
+}
+
+article a {
+    text-decoration: none;
+}
+
+article .news_data {
+    display:flex;       /* Para deixar um ítem ao lado do outro */
+
+}
+
+article .news_posted_at {     /* Local em que informa o dia que a notícia foi postada */
+    background-color: #2b4c99;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+    margin-right: 2px;
+}
+
+article .news_coments {      /* Local em que informa a quantidade de comentários */
+    background-color: #39aae1;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+}
+
+article {
+    width: 100%;          /* Para que ela ocupe todo o espaço disponível e a div filha (abixo) possa ocupar todo os espaço quando for indicado o tamanho da sia width de 100% */
+}
+
+article .news_thumbnail img {           /* Local em que aparece a miniatura da imagem da notícia */
+    width: 100%;
+    height: auto;
+
+}
+
+article .news_thumbnail {
+    margin-top: 30px;
+}
+
+article .news_title {                   /* Local em que aparece o título da notícia */
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #000;
+    font-size: 23px;
+}
+
+article .news_resume {            /* Local em que aparece o resumo da notícia */
+    color: #5c5c5c;
+    font-size: 14px;
+    line-height: 20px;        /* Espaçamento entre uma linha e outra */
+    margin-bottom: 30px;
+}
+
+.flex {            /* para fazer o elemnto que tiver essa class funcionar como flex dessa forma*/ 
+    display: flex;    
+    flex-wrap: wrap;
+}
+
+article {
+    flex:1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+.square {
+    height: 110px;
+    width: 110px;
+    background-color: #0079c7;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.appointment_text {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.appointment_contact {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.contact_info1, .contact_info2, .contact_info3  {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.contact_info1 {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.contact_info2 {
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+}
+
+.contact_info3 {
+    border-bottom: 1px solid #ccc;
+}
+
+.contact_img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0;
+    padding-right: 10px;
+}
+
+.contact_info2 a , .contact_info3 a {   
+    text-decoration: none;
+    color: #0079c7;
+}
+
+.contact_info2 a:hover, .contact_info3 a:hover{
+    color: #4160a7;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_menu {
+    display: flex;
+
+}
+
+.fm_1, .fm_2, .fm_3 {
+    flex:1;
+    color: #fff;
+    
+}
+
+.fm_1 {
+    background-color: #39aae1;
+}
+
+.fm_2 {
+    background-color: #0079c7;
+}
+
+.fm_3{
+    background-color: #2b4c99;
+}
+
+.fm_title {
+    font-size: 21px;
+}
+
+.fm_desc {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.footer_menu a {
+    display: block;        /* toda a área do quadrado vira um link (menos onde colocou a padding)*/  
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer_area {
+    display:flex;
+}
+
+.footer_areaitem {
+    flex: 1;
+    color: #fff;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+footer .widget_title_text {
+    color: #fff;
+}
+
+footer .widget_body {
+    font-size: 12px;
+    color: #5c5c5c;
+    line-height: 20px;
+    margin-right: 20px;
+}
+
+.address_contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_email {
+    color: #fff;
+}
+
+.paragraph {
+    display:flex;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.arrow {
+    margin-right: 10px;
+}
+
+.text_posted {
+    color: #36a9e1;
+}
+
+.tweet_content {
+    color: #5c5c5c
+}
+
+.arrow_tweet {
+    color:#5c5c5c;
+    margin-right: 10px;
+}
+
+.footer_copy {
+    border-top: 1px solid #2c2c2c;
+    height: 40px;
+    line-height: 40px;
+    color: #5c5c5c;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVIDADE: */
+
+.menuMobile {      /* botão usado no modo mobile para fazer o menu aparacer*/
+    display:none;  /* ja que, por padrão, ele não aparace (só na versão mobile) */
+    width:40px;
+    height:40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.mm_line {       /* botão dentro do menuMobile*/
+    height:3px;
+    background-color: #39aae1;
+}
+
+@media (max-width:600px) /* (até 600px --> tela menor que 600px) */ {
+    .banner_headline h1 {
+        font-size: 55px;
+    }
+
+    .banner_headline {
+        padding: 20px;
+    }
+    .banner_headline h2 {
+        font-size: 17px;
+    }
+    .banner_options {
+        height:auto;
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    #geral section {
+        padding: 20px;
+    }
+
+    #geral aside {
+        padding: 20px;
+    }
+
+    .footer_menu {
+        flex-direction: column;
+    }
+
+    .footer_area {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer_copy {
+        padding-left: 20px;
+    }
+
+    header .container {
+        flex-direction: row;
+    }
+
+    nav ul {
+        flex-direction:column;    /* alterar a visualização do menu no celular (para ficar um item abaixo do outro)*/
+        display:none;             /* para o menu não aparecer */
+        position:absolute;
+        left:0;                   /* para deixar na ponta esquerda */
+        width:100%;               /* para ocupar todo o espaço disponível no aparelho */
+        background-color: #fff;
+
+    }
+
+    header {
+        height:auto;          /* tirar a altura fixa de 120 px do cabeçalho, pois de acordo com o tamanho do celular, ela sofre alterarções*/
+    }
+
+    .logo {
+        padding-left: 20px;
+    }
+
+    .menuMobile {
+        display:flex;      /* ja que só aparece na versão mobile */
+        flex-direction: column;
+        justify-content: space-around;  
+    }
+}
