@@ -7,67 +7,67 @@ body {
     padding: 0;
 }
 header {
-    display:flex; /* TORNAR O CONTEUDO DO CABEÇALHO FLEXBOX */
+    display:flex; 
     flex-direction: row;
-    justify-content: center; /* ALINHAR O CONTEÚDO DO CABEÇALHO NA HORIZONTAL (ROW) */
+    justify-content: center; 
     height: 120px;
 }
 .container {
     display:flex;
-    justify-content: space-between; /* AFASTA OS ELEMENTOS DENTRO DO CONTAINER/CABEÇALHO (LOGO E MENU) */
+    justify-content: space-between; 
     width: 990px;
 }
 
 .logo {
     display:flex;
-    align-items: center; /* ALINHA A LOGO NA VERTICAL (CONTRÁRIO DA ROW) */
+    align-items: center; 
 }
 
 .menu{
     display: flex;
-    align-items: center; /* ALINHA O MENU NA VERTICAL (CONTRÁRIO DA ROW) */
+    align-items: center; 
     font-family: arial;
 }
 
-nav ul, nav li { /* LISTA DENTRO DO MENU */
+nav ul, nav li { 
     list-style: none;
     margin:0;
     padding: 0;
 }
 
 nav ul {
-    display:flex; /* ITEM SUPERIOR DA LISTA DENTRO DO MENU */
+    display:flex; 
 }
 
 nav a {  /* LINKS DENTRO DO MENU */
-    display: inline-block;  /* ORGANIZA O POSICIONAMENTO DOS LINKS */
+    display: inline-block;  
     padding: 15px;
     text-decoration: none;
     text-transform: uppercase;
     color: #727272;
 }
 
-nav a:hover, nav .active a {  /* HOVER DOS LINKS DENTRO DO MENU E O LINK DO MENU QUE ESTIVER SELECIONADO */
+nav a:hover, nav .active a {  
     background-color: #39aae1;
     color: #fff;
 }
 
 #banner {
     background-image:url(../images/img1.jpg);
-    background-position: center; /* para posicionar a imagem no centro */
-    background-size: cover; /* a imagem vai reduzir ou aumentar conforme o tamanho do monitor*/
+    background-position: center; 
+    background-size: cover; 
     height: auto;
     display: flex;
     justify-content: center;
 }
 
-.column {  /* parte do container (no banner) que precisa ser column pois vai ficar um item abaixo do outro  */
+.column {  
     display: flex;
     flex-direction: column;
 }
 
 .banner_headline {
-    flex:1;   /* não precisa de um tamanho fixo (fica com o que restar do de baixo) */
+    flex:1;   
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -93,8 +93,8 @@ nav a:hover, nav .active a {  /* HOVER DOS LINKS DENTRO DO MENU E O LINK DO MENU
 }
 
 .banner_options {
-    height:210px;    /* Precisa de um tamanho fixo */
-    display: flex;  /* O flex direction continua sendo row (pois é um do lado do outro)*/
+    height:210px;    
+    display: flex;  
 }
 
 .banner1 {
@@ -122,13 +122,13 @@ nav a:hover, nav .active a {  /* HOVER DOS LINKS DENTRO DO MENU E O LINK DO MENU
     font-size: 21px;
 }
 
-.banner_desc {      /* Conteúdo dos banners 1 e 2 */
+.banner_desc {      
     font-size: 12px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.banner_options a {     /* Link dos banners 1 e 2 */
+.banner_options a {     
     display:inline-block;
     color:#fff;
     border: 1px solid #fff;
@@ -137,7 +137,7 @@ nav a:hover, nav .active a {  /* HOVER DOS LINKS DENTRO DO MENU E O LINK DO MENU
     font-size: 13px;
 }
 
-.banner_desc2 {     /* Conteúdo do banner 3 */
+.banner_desc2 {     
     font-size:12px;
     border-bottom: 1px solid #39aee1;
     display:flex;
@@ -152,10 +152,10 @@ nav a:hover, nav .active a {  /* HOVER DOS LINKS DENTRO DO MENU E O LINK DO MENU
 }
 
 #geral section {
-    flex:2;     /* Pois essa parte ocupa 2/3 da tela */
+    flex:2;     
 }
 
-#geral aside {   /* Pois essa parte ocupa 1/3 da tela */
+#geral aside {   
     flex: 1;
 }
 
@@ -183,11 +183,11 @@ article a {
 }
 
 article .news_data {
-    display:flex;       /* Para deixar um ítem ao lado do outro */
+    display:flex;       
 
 }
 
-article .news_posted_at {     /* Local em que informa o dia que a notícia foi postada */
+article .news_posted_at {     
     background-color: #2b4c99;
     color: #fff;
     font-size: 12px;
@@ -195,7 +195,7 @@ article .news_posted_at {     /* Local em que informa o dia que a notícia foi p
     margin-right: 2px;
 }
 
-article .news_coments {      /* Local em que informa a quantidade de comentários */
+article .news_coments {     
     background-color: #39aae1;
     color: #fff;
     font-size: 12px;
@@ -203,10 +203,10 @@ article .news_coments {      /* Local em que informa a quantidade de comentário
 }
 
 article {
-    width: 100%;          /* Para que ela ocupe todo o espaço disponível e a div filha (abixo) possa ocupar todo os espaço quando for indicado o tamanho da sia width de 100% */
+    width: 100%;      
 }
 
-article .news_thumbnail img {           /* Local em que aparece a miniatura da imagem da notícia */
+article .news_thumbnail img {           
     width: 100%;
     height: auto;
 
@@ -216,21 +216,21 @@ article .news_thumbnail {
     margin-top: 30px;
 }
 
-article .news_title {                   /* Local em que aparece o título da notícia */
+article .news_title {                   
     margin-top: 25px;
     margin-bottom: 25px;
     color: #000;
     font-size: 23px;
 }
 
-article .news_resume {            /* Local em que aparece o resumo da notícia */
+article .news_resume {            
     color: #5c5c5c;
     font-size: 14px;
-    line-height: 20px;        /* Espaçamento entre uma linha e outra */
+    line-height: 20px;        
     margin-bottom: 30px;
 }
 
-.flex {            /* para fazer o elemnto que tiver essa class funcionar como flex dessa forma*/ 
+.flex {             
     display: flex;    
     flex-wrap: wrap;
 }
@@ -347,7 +347,7 @@ footer {
 }
 
 .footer_menu a {
-    display: block;        /* toda a área do quadrado vira um link (menos onde colocou a padding)*/  
+    display: block;         
     text-decoration: none;
     color: #fff;
     padding: 20px;
@@ -422,8 +422,8 @@ footer .widget_body {
 
 /* RESPONSIVIDADE: */
 
-.menuMobile {      /* botão usado no modo mobile para fazer o menu aparacer*/
-    display:none;  /* ja que, por padrão, ele não aparace (só na versão mobile) */
+.menuMobile {      
+    display:none;  
     width:40px;
     height:40px;
     margin-top: 40px;
@@ -431,12 +431,12 @@ footer .widget_body {
     margin-right: 20px;
 }
 
-.mm_line {       /* botão dentro do menuMobile*/
+.mm_line {       
     height:3px;
     background-color: #39aae1;
 }
 
-@media (max-width:600px) /* (até 600px --> tela menor que 600px) */ {
+@media (max-width:600px) {
     .banner_headline h1 {
         font-size: 55px;
     }
@@ -482,17 +482,17 @@ footer .widget_body {
     }
 
     nav ul {
-        flex-direction:column;    /* alterar a visualização do menu no celular (para ficar um item abaixo do outro)*/
-        display:none;             /* para o menu não aparecer */
+        flex-direction:column;    
+        display:none;             
         position:absolute;
-        left:0;                   /* para deixar na ponta esquerda */
-        width:100%;               /* para ocupar todo o espaço disponível no aparelho */
+        left:0;                   
+        width:100%;               
         background-color: #fff;
 
     }
 
     header {
-        height:auto;          /* tirar a altura fixa de 120 px do cabeçalho, pois de acordo com o tamanho do celular, ela sofre alterarções*/
+        height:auto;          
     }
 
     .logo {
@@ -500,7 +500,7 @@ footer .widget_body {
     }
 
     .menuMobile {
-        display:flex;      /* ja que só aparece na versão mobile */
+        display:flex;      
         flex-direction: column;
         justify-content: space-around;  
     }
